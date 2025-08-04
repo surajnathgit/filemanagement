@@ -258,7 +258,7 @@ const WorkforceShiftSection = () => {
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                     "&:hover": {
                       boxShadow: "0 6px 32px rgba(64, 104, 180, 0.25)",
-                      transform: "scale(1.03)",
+                      transform: "scale(1.04)",
                     },
                   }}
                 >
@@ -324,7 +324,7 @@ const WorkforceShiftSection = () => {
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                     "&:hover": {
                       boxShadow: "0 6px 32px rgba(255, 105, 165, 0.25)",
-                      transform: "scale(1.03)",
+                      transform: "scale(1.04)",
                     },
                   }}
                 >
@@ -470,7 +470,7 @@ const WorkforceShiftSection = () => {
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                     "&:hover": {
                       boxShadow: "0 6px 32px rgba(155, 95, 255, 0.25)",
-                      transform: "scale(1.03)",
+                      transform: "scale(1.04)",
                     },
                   }}
                 >

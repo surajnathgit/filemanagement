@@ -94,14 +94,9 @@ function Navbar() {
       passHref
       style={{ textDecoration: "none", color: "white" }}
     >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box sx={{ display: "flex", mr:2 }}>
         <Typography variant="h6" sx={{ fontWeight: 700 }}>
-          File{" "}
-        </Typography>
-        <Typography variant="h6" sx={{ fontWeight: 700, background: "linear-gradient(90deg, #4E36FF, #FF6B6B)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent", }}>
-          Management 
+          File Management
         </Typography>
       </Box>
     </Link>

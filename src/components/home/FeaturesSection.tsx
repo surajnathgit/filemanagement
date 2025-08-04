@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import {
   Box,
   Container,
@@ -9,83 +10,103 @@ import {
   useTheme,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import {BorderColorOutlined, GroupAddOutlined, TrendingUpOutlined} from "@mui/icons-material";
-import {NotificationsActiveOutlined, DeviceHubOutlined, GradingOutlined} from "@mui/icons-material";
-import {ViewKanbanOutlined, AccessTimeOutlined, ExtensionOutlined} from "@mui/icons-material";
-import {TipsAndUpdatesOutlined, EventAvailableOutlined, GroupsOutlined} from "@mui/icons-material";
+import {
+  FiDatabase,
+  FiSearch,
+  FiShield,
+  FiUpload,
+  FiFileText,
+  FiArchive,
+  FiCopy,
+} from "react-icons/fi";
+import { LuTags, LuPlug, LuScanLine } from "react-icons/lu";
+import { LiaMobileAltSolid } from "react-icons/lia";
+import { IoGitBranchOutline } from "react-icons/io5";
 
 const features = [
   {
-    icon: <BorderColorOutlined sx={{fontSize: '45px'}} />,
-    title: "Centralized Repository with unlimited storage",
+    icon: FiDatabase,
+    title: "Centralized Repository",
     description: "Store all your documents in one place with no limits on file size or volume.",
-    bg: "linear-gradient(135deg, #4E36FF 0%, #7C3AED 100%)"
+    color: '#1c52e6',
+    // bg: `#3EC2F31A`,
   },
   {
-    icon: <GroupAddOutlined sx={{fontSize: '45px' }}/>,
-    title: "Version Control with complete history",
-    description: "Track, restore, or compare all previous versions of any document effortlessly.",
-    bg: "linear-gradient(135deg, #FF6B6B, #FF8E53)"
+    icon: IoGitBranchOutline,
+    title: "Version Control",
+    description: "Complete history tracking with the ability to restore any previous version of your documents.",
+    color: '#ff6b6b',
+    // bg: `#3EC2F31A`,
   },
   {
-    icon: <TrendingUpOutlined sx={{fontSize: '45px'}} />,
-    title: "AI-powered Search & Retrieval with semantic search",
-    description: "Quickly find files using natural language — not just keywords — powered by AI.",
-    bg: "linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%)",
+    icon: FiSearch,
+    title: "AI-powered Search & Retrieval",
+    description: "Semantic search capabilities that understand context and find exactly what you need instantly.",
+    color: '#44A08D',
+    // bg: `#3EC2F31A`,
   },
   {
-    icon: <NotificationsActiveOutlined sx={{fontSize: '45px'}}/>,
-    title: "Document Categorization & Tagging automated",
-    description: "Files are auto-organized with intelligent tagging and categorization.",
-    bg: "linear-gradient(135deg, #7B61FF, #FF47B6)"
+    icon: LuTags,
+    title: "Document Categorization & Tagging",
+    description: "Automated organization with smart tagging and categorization for effortless file management.",
+    color: '#FF47B6',
+    // bg: `#3EC2F31A`,
   },
   {
-     icon: <DeviceHubOutlined sx={{fontSize: '45px'}}  />,
-    title: "Access Control & Permissions granular",
-    description: "Set detailed access rights for teams, roles, or individuals with full flexibility.",
-    bg: "linear-gradient(135deg, #5C6BC0, #3949AB)"
+    icon: FiShield,
+    title: "Access Control & Permissions",
+    description: "Granular permission settings to control who can view, edit, or share your sensitive documents.",
+    color: '#5C6BC0',
+    // bg: `#3EC2F31A`,
   },
   {
-    icon: <GradingOutlined sx={{fontSize: '45px'}} />,
-    title: "Secure Sharing with expiry dates",
-    description: "Share files safely using time-limited, permission-controlled links.",
-    bg: "linear-gradient(135deg, #D63384, #E91E63)"
+    icon: FiUpload,
+    title: "Secure Sharing",
+    description: "Share files securely with expiry dates and password protection for enhanced security.",
+    color: '#fb5a4f',
+    // bg: `#3EC2F31A`,
   },
   {
-    icon: <ViewKanbanOutlined  sx={{fontSize: '45px'}}/>,
-    title: "Audit Trails for compliance",
-    description: "Monitor document activities with complete logs for security and audits.",
-    bg: "linear-gradient(135deg, #96CEB4, #4CAF50)"
+    icon: FiFileText,
+    title: "Audit Trails",
+    description: "Complete compliance tracking with detailed logs of all file activities and user actions.",
+    color: '#4CAF50',
+    // bg: `#3EC2F31A`,
   },
   {
-     icon: <AccessTimeOutlined sx={{fontSize: '45px'}} />,
-    title: "System Integration capabilities",
-    description: "Seamlessly connect with your existing tools like Slack, Google Workspace, or Teams.",
-    bg: "linear-gradient(135deg, #F7931E, #FF9800)"
+    icon: LuPlug,
+    title: "System Integration",
+    description: "Seamless integration capabilities with your existing tools and enterprise systems.",
+    color: '#FF9800',
+    bg: `#3EC2F31A`,
   },
   {
-     icon: <ExtensionOutlined  sx={{fontSize: '45px'}}/>,
-    title: "Automated Archiving & Retention Policies",
-    description: "Define rules to auto-archive or delete documents based on time or usage.",
-    bg: "linear-gradient(135deg, #45B7D1, #2196F3)"
+    icon: FiArchive,
+    title: "Automated Archiving & Retention",
+    description: "Smart policies that automatically archive and manage files based on your business rules.",
+    color: '#2196F3',
+    // bg: `#3EC2F31A`,
   },
   {
-     icon: <TipsAndUpdatesOutlined sx={{fontSize: '45px'}}/>,
-    title: "Mobile Access with offline sync",
-    description: "Access files anytime via mobile — even without internet — with auto-syncing..",
-    bg: "linear-gradient(135deg,  #AB47BC, #8E24AA)"
+    icon: LiaMobileAltSolid,
+    title: "Mobile Access",
+    description: "Full mobile access with offline sync to keep your files available even without internet.",
+    color: '#AB47BC',
+    // bg: `#3EC2F31A`,
   },
   {
-     icon: <EventAvailableOutlined sx={{fontSize: '45px'}}/>,
-    title: "OCR Integration for scanned documents",
-    description: "Convert scanned images or PDFs into searchable, editable text with OCR.",
-    bg: "linear-gradient(135deg,  #26C6DA, #00ACC1)"
+    icon: LuScanLine,
+    title: "OCR Integration",
+    description: "Advanced OCR technology that makes scanned documents searchable and editable.",
+    color: '#26C6DA',
+    // bg: `#3EC2F31A`,
   },
   {
-    icon: <GroupsOutlined sx={{fontSize: '45px'}}/>,
-    title: "Duplicate File Detection and cleanup",
-    description: "Identify and remove redundant files to keep your repository clutter-free.",
-    bg: "linear-gradient(135deg,  #512DA8, #673AB7)"
+    icon: FiCopy,
+    title: "Duplicate File Detection",
+    description: "Intelligent cleanup tools that identify and remove duplicate files to optimize storage.",
+    color: '#804df5',
+    // bg: `#3EC2F31A`,
   },
 ];
 
@@ -111,7 +132,6 @@ const KeyFeaturesSection = () => {
   };
 
   return (
-    
     <Box
       sx={{
         py: { xs: 8, md: 12 },
@@ -191,7 +211,7 @@ const KeyFeaturesSection = () => {
           />
         ))}
       </Box>
-      
+
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <motion.div
@@ -205,7 +225,7 @@ const KeyFeaturesSection = () => {
               fontWeight="bold"
               sx={{
                 mb: 1,
-                fontSize: { xs: '2.8rem', sm: '3.2rem', md: '3.5rem' },
+                fontSize: { xs: "2.8rem", sm: "3.2rem", md: "3.5rem" },
                 background: "linear-gradient(90deg, #4E36FF, #FF6B6B)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -213,36 +233,47 @@ const KeyFeaturesSection = () => {
             >
               Powerful Features
             </Typography>
-            <Box 
-              sx={{ 
-              width: 80, 
-              height: 3, 
-              background: 'linear-gradient(90deg, #4E36FF, #FF6B6B)',
-              mx: 'auto',
-              borderRadius: '10px',
-              mb: 3
-            }} 
+            <Box
+              sx={{
+                width: 80,
+                height: 3,
+                background: "linear-gradient(90deg, #4E36FF, #FF6B6B)",
+                mx: "auto",
+                borderRadius: "10px",
+                mb: 3,
+              }}
             />
             <Typography
               variant="body1"
               sx={{
                 mx: "auto",
-                fontSize: { xs: '1rem', sm: '1.3rem', md: '1.4rem'},
+                fontSize: { xs: "1rem", sm: "1.3rem", md: "1.4rem" },
                 fontWeight: 600,
                 lineHeight: 1.5,
                 color: "rgba(255, 255, 255, 0.8)",
               }}
             >
-              Built to streamline tasks, boost productivity, and support your team's goals
+              Built to streamline tasks, boost productivity, and support your
+              team's goals
             </Typography>
           </motion.div>
         </Box>
 
         <Grid container spacing={4}>
-          {features.map((feature, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
-              <motion.div
-                initial={{ opacity: 0, y: 40, scale: 0.9 }}
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+
+            return (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                key={index}
+                sx={{ display: "flex" }}
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 40, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{
@@ -250,78 +281,72 @@ const KeyFeaturesSection = () => {
                     delay: 0.2 + Math.floor(index / 3) * 0.2,
                     ease: "easeOut",
                   }}
-                style={{ width: "100%" }}
-              >
-                <Card
-                  elevation={1}
-                  sx={{
-                    px: 1,
-                    background: "rgba(255,255,255,0.06)",
-                    borderRadius: 3,
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    backdropFilter: "blur(10px)",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease",
-                    overflow: "hidden",
-                    border: "2px solid transparent",
-                    '&:hover': {
-                      border: '2px solid rgb(54, 38, 181)',
-                      boxShadow: '0 0 20px rgba(78, 54, 255, 0.35)',
-                      transform: 'translateY(-4px)',
-                    },                  
-                  }}
+                  style={{ width: "100%" }}
                 >
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Box sx={{ mb: 1 }}>
-                      <motion.div
-                        animate={{
-                          y: [0, -2, 0], 
-                        }}
-                        transition={{
-                          duration: 1.5,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
-                      >
-              <Box
-                sx={{
-                  background: feature.bg,
-                  width: 56,
-                  height: 56,
-                  borderRadius: 2,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "0 4px 20px rgba(144, 11, 255, 0.35)",
-                  mb: 2,    
-                }}
-              >
-                <Typography sx={{mt:1, color:'white'}}>
-                {feature.icon}
-                </Typography>
-              </Box>
-              </motion.div>
-              <Typography
-                variant="subtitle1"
-                fontWeight="bold"
-                sx={{ color: "white", mb: 1 }}
-              >
-                {feature.title}
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{ opacity: 0.85, color: "white" }}
-              >
-                {feature.description}
-              </Typography>
-            </Box>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </Grid>
-          ))}
+                  <Card
+                    elevation={1}
+                    sx={{
+                      px: 1,
+                      py: 1,
+                      // background: "rgba(255,255,255,0.06)",
+                      // backdropFilter: "blur(10px)",
+                      background: "rgba(255, 255, 255, 0.03)", // slightly more transparent
+                      backdropFilter: "blur(10px)", // softer and more diffused blur
+                      // border: "2px solid transparent",
+                      border: "1px solid rgba(255, 255, 255, 0.08)",
+                      borderRadius: 4,
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      transition:
+                        "transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease",
+                      overflow: "hidden",
+                      "&:hover": {
+                        border: "1px solid rgb(54, 38, 181)",
+                        boxShadow: "0 0 20px rgba(78, 54, 255, 0.35)",
+                        transform: "translateY(-4px)",
+                      },
+                    }}
+                  >
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Box sx={{ mb: 1 }}>
+                        <Box
+                          sx={{
+                            background: `${feature.color}2A`,
+                            width: 70,
+                            height: 70,
+                            borderRadius: 5,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            mb: 2.5,
+                            p: 2,
+                          }}
+                        >
+                          <Icon size={36} color={feature.color} />
+                        </Box>
+
+                        <Typography
+                          variant="h6"
+                          fontWeight="bold"
+                          sx={{ color: "white", mb: 1.5 }}
+                        >
+                          {feature.title}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{ opacity: 0.85, color: "white" }}
+                        >
+                          {feature.description}
+                        </Typography>
+                      </Box>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
     </Box>
