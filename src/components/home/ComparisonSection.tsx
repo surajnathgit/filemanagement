@@ -329,7 +329,7 @@ const ComparisonSection = () => {
               fontSize: { xs: "1.6rem", md: "2rem" },
             }}
           >
-            Ready to Transform Your Workflow?
+            Ready to Upgrade Your File System?
           </Typography>
       
           <Typography
@@ -340,7 +340,7 @@ const ComparisonSection = () => {
               fontSize: { xs: "0.95rem", md: "1.05rem" },
             }}
           >
-            Join thousands of teams already using our platform to achieve more.
+             Join thousands who’ve made the switch to a simpler, smarter way to manage and access files.
           </Typography>
       
           <Box
