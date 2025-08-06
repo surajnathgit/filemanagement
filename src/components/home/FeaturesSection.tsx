@@ -284,7 +284,7 @@ const KeyFeaturesSection = () => {
                       transition:
                         "transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease",
                       "&:hover": {
-                        transform: "translateY(-5px)",
+                        transform: "translateY(-10px)",
                         background: "rgba(255, 255, 255, 0.06)",
                         boxShadow: "0 8px 30px rgba(102, 51, 255, 0.25)", 
                         "&::after": {
