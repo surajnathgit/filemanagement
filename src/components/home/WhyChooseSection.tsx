@@ -10,12 +10,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import {
-  SearchOutlined,
-  StorageOutlined,
-  SecurityOutlined,
-  TaskOutlined,
-} from "@mui/icons-material";
+import { SearchOutlined, StorageOutlined, SecurityOutlined, TaskOutlined } from "@mui/icons-material";
 
 const impactData = [
   {
@@ -120,7 +115,7 @@ const WhyChooseSection = () => {
               mb: 4,
               textAlign: "center",
               fontSize: { xs: "0.95rem", sm: "1.05rem", md: "1.15rem" },
-              maxWidth: 700,
+              maxWidth: 800,
               mx: "auto",
             }}
           >
@@ -173,8 +168,18 @@ const WhyChooseSection = () => {
                       color: "white",
                       boxShadow: `0 4px 16px rgba(0,0,0,0.25), 0 0 10px ${theme.palette.primary.main}15`,
                       overflow: "hidden",
-                      transition:
-                        "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border 0.3s ease",
+                      transition: "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border 0.3s ease",
+                      "&::after": {
+                        content: '""',
+                        position: "absolute",
+                        bottom: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "4px",
+                        backgroundImage: item.gradient,
+                        borderBottomLeftRadius: 8,
+                        borderBottomRightRadius: 8,
+                      },
                       "&:hover": {
                         transform: "translateY(-10px) scale(1.03)",
                         background: "rgba(255, 255, 255, 0.07)",
