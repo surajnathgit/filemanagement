@@ -11,20 +11,20 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import {
-  TipsAndUpdates,
-  AutoAwesome,
-  Settings,
-  Alarm,
-  RocketLaunch,
-  AutoGraph,
+  Sort,
+  History,
+  Search,
+  Share,
+  Checklist,
+  AnalyticsOutlined,
 } from "@mui/icons-material";
 import {
-  AutoAwesomeMotion,
-  AccessTime,
-  Forum,
-  TrackChanges,
-  Troubleshoot,
-  FolderCopy,
+  Cloud,
+  IntegrationInstructions,
+  PhoneIphone,
+  Psychology,
+  AutoFixHigh,
+  PeopleAlt,
 } from "@mui/icons-material";
 import {
   DashboardOutlined,
@@ -53,34 +53,34 @@ import Image from "next/image";
 
 const features = [
   {
-    title: "Smart Prioritization",
-    desc: "AI auto-ranks tasks by urgency and workload.",
-    icon: <AutoAwesomeMotion />,
+    title: "Unlimited Storage",
+    desc: "Centralized repository that scales with your needs—no limits, no slowdowns.",
+    icon: <Cloud sx={{ fontSize: "28px" }} />,
   },
   {
-    title: "Deadline Insights",
-    desc: "AI suggests realistic deadlines in real time.",
-    icon: <AccessTime />,
+    title: "Seamless Integration",
+    desc: " Works with your favorite tools and enterprise systems.",
+    icon: <IntegrationInstructions sx={{ fontSize: "28px" }}/>,
   },
   {
-    title: "Built-in Collaboration",
-    desc: "Chat, comment, and share—all in one place.",
-    icon: <Forum />,
+    title: "Access Anywhere",
+    desc: "Desktop, mobile, and offline sync so you can work anytime, anywhere.",
+    icon: <PhoneIphone sx={{ fontSize: "28px" }}/>,
   },
   {
-    title: "Milestone Tracking",
-    desc: "Stay aligned with clear goals and checkpoints.",
-    icon: <TrackChanges />,
+    title: "AI-Powered Management",
+    desc: "Smart search, auto-tagging, and OCR for quick file organization.",
+    icon: <Psychology sx={{ fontSize: "28px" }}/>,
   },
   {
-    title: "Predictive Progress",
-    desc: "Get early warnings for delays or risks.",
-    icon: <Troubleshoot />,
+    title: "Smart Cleanup",
+    desc: "Detects and removes duplicate files automatically to save space and stay organized.",
+    icon: <AutoFixHigh sx={{ fontSize: "28px" }}/>,
   },
   {
-    title: "File Management",
-    desc: "Upload and access files right in your tasks.",
-    icon: <FolderCopy />,
+    title: "Collaboration & Sharing",
+    desc: "Granular permissions and secure links with expiry dates.",
+    icon: <PeopleAlt sx={{ fontSize: "28px" }}/>,
   },
 ];
 
@@ -264,7 +264,7 @@ const ProductDemoPage = () => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Explore Task Master
+                Explore File Management
               </Typography>
             </Box>
 
@@ -283,9 +283,7 @@ const ProductDemoPage = () => {
                 },
               }}
             >
-              Explore how Task Master’s intuitive design and smart features help
-              your team stay organized, meet deadlines, and work more
-              efficiently—every step of the way.
+              Discover how our intuitive design and smart features make file management effortless—helping you organize, access, and share documents quickly, securely, and efficiently at every step.
             </Typography>
           </motion.div>
         </Container>
@@ -618,11 +616,9 @@ const ProductDemoPage = () => {
                     "linear-gradient(90deg, #4E36FF 0%, #900BFF 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  mb: 2,
+                  mb: 1.8,
                   fontSize: {
-                    xs: "1.75rem", 
-                    sm: "2rem",    
-                    md: "2.5rem",  
+                    xs: "1.8rem", sm: "2.4rem", md: "2.75rem"
                   },
                 }}
               >
@@ -631,13 +627,10 @@ const ProductDemoPage = () => {
               <Typography
                 variant="body1"
                 textAlign="center"
-                mb={4}
-                sx={{ maxWidth: 700, mx: "auto", fontSize: {
-                  xs: "0.9rem", 
-                  sm: "1rem",     
-                }}}
+                mb={6}
+                sx={{ maxWidth: 700, mx: "auto", fontSize: {xs: "0.95rem", sm: "1.05rem", md: "1.15rem"}}}
               >
-                Your solution to Smarter Task Management
+                Explore the smart features that make file management effortless
               </Typography>
             </motion.div>
 
@@ -666,8 +659,10 @@ const ProductDemoPage = () => {
                         flexDirection: "column",
                         background: "rgba(255,255,255,0.05)",
                         borderRadius: 3,
-                        p: 3,
+                        px: 3,
+                        py: 4.5,
                         "&:hover": {
+                          background: "rgba(255,255,255,0.07)", 
                           boxShadow: "0 6px 24px rgba(13, 25, 184, 0.34)",
                         },
                       }}
@@ -683,9 +678,9 @@ const ProductDemoPage = () => {
                         <Box
                           sx={{
                             background:
-                              "linear-gradient(135deg, #4E36FF, #900BFF)",
-                            width: 38,
-                            height: 38,
+                              "linear-gradient(135deg, #4E36FF, #FF6B6B)",
+                            width: 50,
+                            height: 50,
                             borderRadius: 2,
                             display: "flex",
                             alignItems: "center",
@@ -694,7 +689,7 @@ const ProductDemoPage = () => {
                           }}
                         >
                           <Typography
-                            sx={{ fontSize: 20, color: "#fff", mt: 1 }}
+                            sx={{ color: "#fff", mt: 1 }}
                           >
                             {feature.icon}
                           </Typography>
@@ -712,7 +707,7 @@ const ProductDemoPage = () => {
                       {/* Description */}
                       <Typography
                         variant="body2"
-                        sx={{ opacity: 0.9, color: "white" }}
+                        sx={{ opacity: 0.9, color: "white", fontSize: "0.95rem" }}
                       >
                         {feature.desc}
                       </Typography>
@@ -723,8 +718,8 @@ const ProductDemoPage = () => {
             </Grid>
           </Box>
 
-          {/* What Makes Us Different */}
-          <Box sx={{ mt: 16, mb: 6 }}>
+          {/* How It's Different */}
+          <Box sx={{ mt: 10, mb: 6 }}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -737,30 +732,24 @@ const ProductDemoPage = () => {
                 textAlign="center"
                 sx={{
                   background:
-                    "linear-gradient(90deg, #4E36FF 0%, #900BFF 100%)",
+                    "linear-gradient(135deg, #4E36FF 0%, #900BFF 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  mb: 2,
+                  mb: 1.8,
                   fontSize: {
-                    xs: "1.75rem", 
-                    sm: "2rem",    
-                    md: "2.5rem",  
+                    xs: "1.8rem", sm: "2.4rem", md: "2.75rem"
                   },
                 }}
               >
-                What Sets Task Master Apart?
+                How It's Different
               </Typography>
               <Typography
                 variant="body1"
                 textAlign="center"
-                mb={4}
-                sx={{ maxWidth: 700, mx: "auto", fontSize: {
-                  xs: "0.875rem", 
-                  sm: "1rem",     
-                } }}
+                mb={6}
+                sx={{ maxWidth: 700, mx: "auto", fontSize: {xs: "0.95rem", sm: "1.05rem", md: "1.15rem"} }}
               >
-                Discover how Task Master goes beyond basic task management to
-                simplify, automate, and elevate your workflow.
+                Discover why our File Management stands above the competition
               </Typography>
             </motion.div>
 
@@ -768,39 +757,39 @@ const ProductDemoPage = () => {
               <Grid container spacing={3}>
                 {[
                   {
-                    icon: <TipsAndUpdates sx={{ fontSize: "30px" }} />,
-                    title: "Thinks Ahead",
-                    desc: "AI suggests priorities and predicts risks.",
+                    icon: <Sort sx={{ fontSize: "30px" }} />,
+                    title: " Instant Search",
+                    desc: "Find any file in seconds, no matter where it’s stored.",
                     bg: "linear-gradient(135deg, #D63384, #E91E63)",
                   },
                   {
-                    icon: <AutoAwesome sx={{ fontSize: "30px" }} />,
-                    title: "All-in-One",
-                    desc: "Chat, share files, assign & automate tasks.",
+                    icon: <History sx={{ fontSize: "30px" }} />,
+                    title: "Effortless Sharing",
+                    desc: "Send files securely—no account needed for recipients.",
                     bg: "linear-gradient(135deg, #96CEB4, #4CAF50)",
                   },
                   {
-                    icon: <Settings sx={{ fontSize: "30px" }} />,
-                    title: "No-Code Rules",
-                    desc: "Create workflows without writing code.",
+                    icon: <Search sx={{ fontSize: "30px" }} />,
+                    title: "Version Vault",
+                    desc: "Restore any file from any point in time.",
                     bg: "linear-gradient(135deg, #FF6B6B, #FF8E53)",
                   },
                   {
-                    icon: <Alarm sx={{ fontSize: "30px" }} />,
-                    title: "Risk Alerts",
-                    desc: "Get notified of delays before they happen.",
+                    icon: <Share sx={{ fontSize: "30px" }} />,
+                    title: "Smart Sorting",
+                    desc: "AI groups files by content, project, or activity.",
                     bg: "linear-gradient(135deg,  #AB47BC, #8E24AA)",
                   },
                   {
-                    icon: <RocketLaunch sx={{ fontSize: "30px" }} />,
-                    title: "Easy Onboarding",
-                    desc: "Start fast with zero learning curve.",
+                    icon: <Checklist sx={{ fontSize: "30px" }} />,
+                    title: "Bulk Actions",
+                    desc: "Edit, tag, or move hundreds of files in one go.",
                     bg: "linear-gradient(135deg, #45B7D1, #2196F3)",
                   },
                   {
-                    icon: <AutoGraph sx={{ fontSize: "30px" }} />,
-                    title: "Scalable",
-                    desc: "Grows with teams of any size.",
+                    icon: <AnalyticsOutlined sx={{ fontSize: "30px" }} />,
+                    title: "Insight Tracker",
+                    desc: "See who’s viewed, downloaded, or updated your files.",
                     bg: "linear-gradient(135deg, #7B61FF, #FF47B6)",
                   },
                 ].map((item, index) => (
@@ -894,7 +883,7 @@ const ProductDemoPage = () => {
                           <Typography
                             className="description"
                             variant="body2"
-                            sx={{ color: "rgba(255,255,255,0.8)" }}
+                            sx={{ color: "rgba(255,255,255,0.8)", fontSize: "0.92rem" }}
                           >
                             {item.desc}
                           </Typography>

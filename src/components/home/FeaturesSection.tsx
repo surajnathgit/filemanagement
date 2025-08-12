@@ -372,7 +372,7 @@ const KeyFeaturesSection = () => {
                           sx={{
                             opacity: 0.65,
                             color: "white",
-                            fontSize: "0.9rem",
+                            fontSize: "0.95rem",
                           }}
                         >
                           {feature.description}
