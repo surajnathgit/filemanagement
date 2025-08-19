@@ -27,27 +27,24 @@ import {
   PeopleAlt,
 } from "@mui/icons-material";
 import {
-  DashboardOutlined,
-  AddTask,
-  InsertChartOutlined,
+  FolderSpecial,
+  HistoryToggleOff,
+  ManageSearch,
 } from "@mui/icons-material";
 import {
-  TaskAltRounded,
-  GroupRounded,
-  AutoAwesomeRounded,
-  ChecklistRounded,
+  Workspaces,
+  FindInPage,
+  FolderOpen,
 } from "@mui/icons-material";
 import {
-  CreateRounded,
-  ManageSearchRounded,
-  DateRangeRounded,
-  NotesRounded,
+  RestorePage,
+  ListAlt,
+  CloudDone,
 } from "@mui/icons-material";
 import {
-  ArticleRounded,
-  DonutLargeRounded,
-  CategoryRounded,
-  AutorenewRounded,
+  Timeline,
+  BarChart,
+  Label,
 } from "@mui/icons-material";
 import Image from "next/image";
 
@@ -87,17 +84,18 @@ const features = [
 const steps = [
   {
     step: 1,
-    heading: "Dashboard Overview",
+    chip: "Organize",
+    heading: "Smart File Organization",
     description:
-      "Get a comprehensive view of all your tasks with our intuitive dashboard. See assigned tasks, received tasks, and track progress at a glance. Whether working solo or with a team, the dashboard keeps your tasks clear and organized. Navigate our clean, user-friendly interface built for seamless experience every step of the way.",
+      "Keep your digital workspace clutter-free with AI-powered file organization. Automatically categorize files by type, project, or activity so you can always find what you need without manual effort. Designed to save time and keep workflows smooth.",
     features: [
-      { text: "Unified Task View", icon: <TaskAltRounded /> },
-      { text: "Team Collaboration", icon: <GroupRounded /> },
-      { text: "Clean & Intuitive Interface", icon: <AutoAwesomeRounded /> },
-      { text: "Task organization", icon: <ChecklistRounded /> },
+      { text: "AI-driven categorization", icon: <Psychology /> },
+      { text: "Project-based grouping", icon: <Workspaces /> },
+      { text: "Content recognition", icon: <FindInPage /> },
+      { text: "Seamless navigation", icon: <FolderOpen /> },
     ],
-    img: "/images/Dashboard-mockup.png",
-    icon: <DashboardOutlined sx={{ color: "#fff", fontSize: 28 }} />,
+    img: "/images/mockup1.png",
+    icon: <FolderSpecial sx={{ color: "#fff", fontSize: 28 }} />,
     bg: "linear-gradient(to left bottom, #3f83ec, #1a70ef, #005cef, #0044ec, #1324e6)",
     boxShadow:
       "0 10px 30px rgba(0, 92, 239, 0.5), 0 4px 15px rgba(63, 131, 236, 0.35)",
@@ -105,17 +103,18 @@ const steps = [
   },
   {
     step: 2,
-    heading: "Quick Task Creation",
+    chip: "Secure",
+    heading: "Version Control & Recovery",
     description:
-      "Create new tasks with ease using our intuitive interface. Our streamlined task creation interface allows you to quickly add task details, assign team members, set deadlines, and include comprehensive multi-line descriptions. Designed for speed and clarity, our task creation process helps your team stay organized and take action faster.",
+      "Never lose track of your files again. Our version vault lets you restore any file to any previous state, ensuring safety from accidental deletions or unwanted changes. Stay confident knowing your work is always recoverable.",
     features: [
-      { text: "Effortless task input", icon: <CreateRounded /> },
-      { text: "Employee search", icon: <ManageSearchRounded /> },
-      { text: "Smart Due Date Picker", icon: <DateRangeRounded /> },
-      { text: "Multi-line support", icon: <NotesRounded /> },
+      { text: "Version history tracking", icon: <History /> },
+      { text: "One-click recovery", icon: <RestorePage /> },
+      { text: "Change logs", icon: <ListAlt /> },
+      { text: "Accident-proof storage", icon: <CloudDone /> },
     ],
-    img: "/images/Add-task-mockup.png",
-    icon: <AddTask sx={{ color: "#fff", fontSize: 28 }} />,
+    img: "/images/mockup2.png",
+    icon: <HistoryToggleOff sx={{ color: "#fff", fontSize: 28 }} />,
     bg: "linear-gradient(to right top, #a666ff, #ac54e7, #af41ce, #ae2bb6, #ab0d9e)",
     boxShadow:
       "0 10px 30px rgba(171, 13, 158, 0.5), 0 4px 15px rgba(166, 102, 255, 0.35)",
@@ -123,17 +122,18 @@ const steps = [
   },
   {
     step: 3,
-    heading: "Task Insights & Progress",
+    chip: "Search",
+    heading: "Insights & Quick Access",
     description:
-      "Stay on top of your workload with our detailed task views and organized tracking system. Effortlessly switch between pending, completed, and all tasks using intuitive tabs and visual indicators. Track task status, deadlines, and completion metrics in real time, with automatic updates providing clear insights into your progress and productivity.",
+      "Find files instantly and track storage usage with built-in insights. Our intelligent search and visual dashboards keep you in control, showing trends, recent activity, and space usage at a glance. Stay productive with quick access to the information that matters most.",
     features: [
-      { text: "Detailed task cards", icon: <ArticleRounded /> },
-      { text: "Status overview", icon: <DonutLargeRounded /> },
-      { text: "Organized tabs", icon: <CategoryRounded /> },
-      { text: "Efficient updates", icon: <AutorenewRounded /> },
+      { text: "Instant file search", icon: <Search /> },
+      { text: "Recent activity tracking", icon: <Timeline /> },
+      { text: "Storage usage insights", icon: <BarChart /> },
+      { text: "Quick filters & tags", icon: <Label /> },
     ],
-    img: "/images/Task-status-mockup.png",
-    icon: <InsertChartOutlined sx={{ color: "#fff", fontSize: 28 }} />,
+    img: "/images/mockup3.png",
+    icon: <ManageSearch sx={{ color: "#fff", fontSize: 28 }} />,
     bg: "linear-gradient(to right top, #6b00ff, #7b27f7, #883bef, #924ce7, #9a5cdf)",
     boxShadow:
       "0 10px 30px rgba(123, 39, 247, 0.5), 0 4px 15px rgba(107, 0, 255, 0.3)",
@@ -347,7 +347,7 @@ const ProductDemoPage = () => {
                           variant="body2"
                           sx={{ color: step.stepTextColor, fontWeight: 700 }}
                         >
-                          Step {step.step} of {steps.length}
+                          {step.chip}
                         </Typography>
                       </Box>
                     </Box>
